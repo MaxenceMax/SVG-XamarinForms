@@ -1,7 +1,7 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="SVG-XamarinForms/Class1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SVG.Xamarin.Forms/SvgIcon.cs">
     <Files>
-      <File FileName="SVG-XamarinForms/Class1.cs" Line="1" Column="1" />
+      <File FileName="SVG.Xamarin.Forms/SvgIcon.cs" Line="41" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -9,6 +9,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SVG.Xamarin.Forms FirstBuild="True" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.SVG-XamarinForms FirstBuild="True" />
 </Properties>
