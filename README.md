@@ -5,7 +5,7 @@ Instead of using an Image Control simply use SvgImage!
 
 ### You MUST :
 
-- Set Height and Width
+- Set Height or Width
 - Set Build Action to Embedded Resource for your svg files 
 - Source to {Project}.{Folder}.{FileName}.{Extension}
 - Assembly to the assembly containing the file
@@ -23,10 +23,7 @@ add the using :
   <svg:SvgIcon 
       HeightRequest="150"
       Assembly="{Binding Assembly}"
-      HasShadow="false"
-      BackgroundColor="Transparent"
-      Source="{Project}.{Folder}.{FileName}.{Extension}"
-      VerticalOptions="Center" />
+      Source="{Project}.{Folder}.{FileName}.{Extension}"/>
 ```
 
 In the example my SVG file is located under the Images folder in the PluginSampleApp project. The SvgAssembly is a reference to the assembly containing the svg/xaml file.
