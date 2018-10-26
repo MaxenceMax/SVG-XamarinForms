@@ -31,6 +31,15 @@ namespace SVG.Xamarin.Forms
             set => SetValue(SourceProperty, value);
         }
 
+        public static readonly BindableProperty AssemblyProperty = BindableProperty.Create(
+            nameof(Assembly),typeof(Assembly),typeof(SvgIcon),default(Assembly));
+        public Assembly Assembly
+        {
+            get => (Assembly)GetValue(AssemblyProperty);
+            set => SetValue(AssemblyProperty, value);
+        }
+
+
         private static void RedrawCanvas(BindableObject bindable, object oldvalue, object newvalue)
         {
             SvgIcon svgIcon = bindable as SvgIcon;
@@ -44,12 +53,13 @@ namespace SVG.Xamarin.Forms
 
             if (string.IsNullOrEmpty(Source))
                 return;
-
-            var assembly = typeof(Application).GetTypeInfo().Assembly;
-            if (assembly != null)
+            if (Assembly != null)
             {
-                using (Stream stream = assembly.GetManifestResourceStream(Source))
+                using (Stream stream = Assembly.GetManifestResourceStream(Source))
                 {
+                    if (stream == null)
+                        throw new SvgNotFoundException(Source);
+
                     SKSvg svg = new SKSvg();
                     svg.Load(stream);
 
@@ -71,3 +81,4 @@ namespace SVG.Xamarin.Forms
         }
 
     }
+}

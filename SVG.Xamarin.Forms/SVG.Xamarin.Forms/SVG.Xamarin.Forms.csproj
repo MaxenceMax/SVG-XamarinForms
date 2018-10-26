@@ -10,4 +10,9 @@
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\Mono.framework\External\xbuild-frameworks\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
